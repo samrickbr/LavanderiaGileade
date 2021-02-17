@@ -73,24 +73,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:visibility="gone"
             android:orientation="horizontal"
-            >
+            android:visibility="gone">
+
             <Button
                 android:id="@+id/btnSalvarCli"
                 android:layout_width="151dp"
                 android:layout_height="60dp"
-                android:text="Salvar"
-                />
+                android:text="Salvar" />
+
             <Button
                 android:id="@+id/btnCancelarCli"
                 android:layout_width="151dp"
                 android:layout_height="60dp"
-                android:text="Cancelar"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="-30dp"/>
+                android:layout_marginRight="-30dp"
+                android:text="Cancelar" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -203,7 +204,71 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/layoutMensalista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/swtMensalista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="-60dp"
+                android:layout_marginBottom="10dp"
+                android:text="MENSALISTA: "
+                tools:checked="false"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <LinearLayout
+                android:id="@+id/layoutVencimento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VENCIMENTO: " />
+
+                    <EditText
+                        android:id="@+id/edtVencimento"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VALOR: " />
+
+                    <EditText
+                        android:id="@+id/edtValor"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
