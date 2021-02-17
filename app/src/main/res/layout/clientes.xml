@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/cardview_shadow_start_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutBtnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:text="Voltar"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="66dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBotoes"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/layoutBtnVoltar">
+
+        <Button
+            android:id="@+id/btnNewCliente"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:text="Novo Cliente" />
+
+        <Button
+            android:id="@+id/btnBuscarCli"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="Buscar Cliente" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCampos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingEnd="30dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layoutBotoes">
+
+        <LinearLayout
+            android:id="@+id/layoutSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btnSalvarCli"
+                android:layout_width="151dp"
+                android:layout_height="60dp"
+                android:text="Salvar"
+                />
+            <Button
+                android:id="@+id/btnCancelarCli"
+                android:layout_width="151dp"
+                android:layout_height="60dp"
+                android:text="Cancelar"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="-30dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CPF: " />
+
+            <EditText
+                android:id="@+id/edtCPF"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOME: " />
+
+            <EditText
+                android:id="@+id/edtNome"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENDEREÇO: " />
+
+            <EditText
+                android:id="@+id/edtEndereco"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TELEFONE: " />
+
+            <EditText
+                android:id="@+id/edtTelefone"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-MAIL: " />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIGLA: " />
+
+            <EditText
+                android:id="@+id/edtSigla"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
