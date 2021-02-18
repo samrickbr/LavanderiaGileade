@@ -1,6 +1,8 @@
 package com.example.lavanderiagileade;
 
-public class Cliente extends clientes {
+import androidx.annotation.NonNull;
+
+public class Cliente {
     String cpf;
     String nome;
     String endereco;
@@ -11,14 +13,15 @@ public class Cliente extends clientes {
     Integer vencimento;
     Double valor;
 
-    public Cliente(String nome, String endereco, String telefone, String email, String sigla,
-                   Boolean mensalista) {
+    public Cliente() {
+    }
+
+    public Cliente(String nome, String endereco, String telefone, String email, String sigla) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
         this.sigla = sigla;
-        this.mensalista = mensalista;
     }
 
     public String getCpf() {
@@ -93,8 +96,7 @@ public class Cliente extends clientes {
         this.valor = valor;
     }
 
-
-
+    @NonNull
     @Override
     public String toString() {
         return "Cliente{" +

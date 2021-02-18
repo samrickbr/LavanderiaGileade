@@ -5,15 +5,16 @@
     android:id="@+id/layoutPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:background="@color/cardview_shadow_start_color"
-    android:orientation="vertical">
+    android:layout_gravity="center"
+    android:background="@color/common_google_signin_btn_text_light_default"
+    android:orientation="vertical"
+    tools:context=".CadClientes">
 
     <LinearLayout
         android:id="@+id/layoutBtnVoltar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +33,7 @@
     <LinearLayout
         android:id="@+id/layoutBotoes"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -45,7 +46,8 @@
             android:layout_height="60dp"
             android:layout_marginEnd="5dp"
             android:padding="5dp"
-            android:text="Novo Cliente" />
+            android:text="Novo Cliente"
+            tools:ignore="ButtonStyle,HardcodedText" />
 
         <Button
             android:id="@+id/btnBuscarCli"
@@ -53,7 +55,8 @@
             android:layout_height="60dp"
             android:layout_marginLeft="5dp"
             android:padding="5dp"
-            android:text="Buscar Cliente" />
+            android:text="Buscar Cliente"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
 
     </LinearLayout>
 
@@ -61,12 +64,13 @@
         android:id="@+id/layoutCampos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingEnd="30dp"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/layoutBotoes">
+        app:layout_constraintTop_toBottomOf="@id/layoutBotoes"
+        tools:ignore="RtlSymmetry">
 
         <LinearLayout
             android:id="@+id/layoutSalvar"
@@ -80,7 +84,8 @@
                 android:id="@+id/btnSalvarCli"
                 android:layout_width="151dp"
                 android:layout_height="60dp"
-                android:text="Salvar" />
+                android:text="Salvar"
+                tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
                 android:id="@+id/btnCancelarCli"
@@ -88,7 +93,8 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="-30dp"
-                android:text="Cancelar" />
+                android:text="Cancelar"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
 
         </LinearLayout>
 
@@ -97,17 +103,22 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CPF: " />
+                android:text="CPF: "
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/edtCPF"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:labelFor="@+id/edtCPF"
+                tools:ignore="Autofill" />
 
         </LinearLayout>
 
@@ -116,17 +127,21 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NOME: " />
+                android:text="NOME: "
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/edtNome"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                tools:ignore="Autofill,LabelFor" />
 
         </LinearLayout>
 
@@ -135,17 +150,21 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ENDEREÇO: " />
+                android:text="ENDEREÇO: "
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/edtEndereco"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                tools:ignore="Autofill,LabelFor" />
 
         </LinearLayout>
 
@@ -154,17 +173,21 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TELEFONE: " />
+                android:text="TELEFONE: "
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/edtTelefone"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                tools:ignore="Autofill,LabelFor" />
 
         </LinearLayout>
 
@@ -173,17 +196,21 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-MAIL: " />
+                android:text="E-MAIL: "
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/edtEmail"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                tools:ignore="Autofill,LabelFor" />
 
         </LinearLayout>
 
@@ -192,18 +219,21 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SIGLA: " />
+                android:text="SIGLA: "
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/edtSigla"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="text"
+                tools:ignore="Autofill,LabelFor" />
         </LinearLayout>
 
         <LinearLayout
@@ -212,7 +242,8 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
 
             <Switch
                 android:id="@+id/swtMensalista"
@@ -220,10 +251,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="-60dp"
-                android:layout_marginBottom="10dp"
                 android:text="MENSALISTA: "
                 tools:checked="false"
-                tools:ignore="UseSwitchCompatOrMaterialXml" />
+                tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
 
             <LinearLayout
                 android:id="@+id/layoutVencimento"
@@ -242,13 +272,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="VENCIMENTO: " />
+                        android:text="VENCIMENTO: "
+                        tools:ignore="HardcodedText" />
 
                     <EditText
                         android:id="@+id/edtVencimento"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        tools:ignore="Autofill,LabelFor" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -260,15 +292,76 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="VALOR: " />
+                        android:text="VALOR: "
+                        tools:ignore="HardcodedText" />
 
                     <EditText
                         android:id="@+id/edtValor"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,LabelFor" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPesquisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layoutBtnVoltar"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEditarCliente"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp"
+                android:text="Editar Cliente"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/btnCancelarPesq"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:text="Cancelar"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtPesquisar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="51dp"
+                android:layout_marginEnd="49dp"
+                android:hint="Comece a digitar para pesquisar"
+                android:inputType="text"
+                tools:ignore="Autofill,HardcodedText,TextFields" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recicleClientes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/layout_lista_clientes" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

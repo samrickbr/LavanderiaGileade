@@ -17,15 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnCliente = (Button) findViewById(R.id.btnCliente);
-        btnDelivery = (Button) findViewById(R.id.btnDelivery);
+        btnCliente = findViewById(R.id.btnCliente);
+        btnDelivery = findViewById(R.id.btnDelivery);
 
-        btnCliente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaCliente = new Intent(MainActivity.this, clientes.class);
-                startActivity(telaCliente);
-            }
+        btnCliente.setOnClickListener(v -> {
+            Intent telaCliente = new Intent(MainActivity.this, CadClientes.class);
+            startActivity(telaCliente);
         });
     }
 }
